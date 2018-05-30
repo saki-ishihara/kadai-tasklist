@@ -14,4 +14,4 @@
     
     {!! link_to_route('tasklists.create', '新規タスクの追加') !!}
 
-@endsections
+@endsection

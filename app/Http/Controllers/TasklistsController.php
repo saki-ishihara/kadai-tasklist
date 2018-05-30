@@ -17,12 +17,11 @@ class TasklistsController extends Controller
      */
     public function index()
     {
-         $tasklist = Tasklist::all();
+        $tasklists = Tasklist::all();
 
         return view('tasklists.index', [
             'tasklists' => $tasklists,
         ]);
-
     }
 
     /**
