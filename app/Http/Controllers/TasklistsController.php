@@ -47,7 +47,7 @@ class TasklistsController extends Controller
     public function store(Request $request)
     {
          $this->validate($request, [
-            'status' => 'required|max:191',   // add
+            'status' => 'required|max:10',   // add
             'content' => 'required|max:191',
         ]);
         
@@ -100,12 +100,12 @@ class TasklistsController extends Controller
     public function update(Request $request, $id)
     {
          $this->validate($request, [
-              'title' => 'required|max:191', 
+              'status' => 'required|max:10', 
             'content' => 'required|max:191',
         ]);
                 $tasklist = Tasklist::find($id);
-                        $tasklist->title = $request->title;
-        $tasklist->content = $request->content;
+                        $tasklist->status = $request->status;
+                        $tasklist->content = $request->content;
         $tasklist->save();
 
         return redirect('/');
