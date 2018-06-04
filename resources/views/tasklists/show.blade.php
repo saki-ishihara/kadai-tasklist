@@ -7,7 +7,7 @@
 <table class="table table-bordered">
         <tr>
             <th>id</th>
-            <td>{{ $message->id }}</td>
+            <td>{{ $tasklist->id }}</td>
         </tr>
         <tr>
             <th>ステータス</th>
